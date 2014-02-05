@@ -169,6 +169,7 @@ else
     dirloc="$(pwd)"
 
     IFS=/ read -a dirarr <<< "$dirloc"
+    echo "${dirarr[5]}"
     if [ "${dirarr[5]}" != "introHCI" ]
     then
       echo "FAIL: Either you are not running this script in the introHCI directory or your directory is named incorrectly."
